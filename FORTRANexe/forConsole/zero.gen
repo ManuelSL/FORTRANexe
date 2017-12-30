@@ -1,0 +1,34 @@
+		
+		
+		SUBROUTINE ZERO<T>( N, ARRAY )
+		*+
+		*  Name:
+		*     ZERO<T>
+		*  Purpose:
+		*     Zero all the elements of a <COMM> array
+		*  Invocation :
+		*     CALL ZERO<T>( N, ARRAY )
+		*  Description :
+		*     This sets all the elements of a <COMM> array to zero
+		*  Argument:
+		*     N = INTEGER( Given )
+		*        Dimension of array
+		*     ARRAY( N ) = <TYPE>( Given and Returned )
+		*        The array to be zeroed
+		*                   "
+		*     (the rest of the standard prologue)
+		*                   "
+		*  Type Definitions:
+			IMPLICIT NONE
+		*  Arguments Given:
+			INTEGER N
+		*  Arguments Given and Returned:
+			<TYPE> ARRAY( N )
+		*  Local Variables:
+			INTEGER I                  ! Array index
+		*-
+
+			DO I = 1, N
+				ARRAY( I ) = 0<CONST>
+			END DO
+		END
